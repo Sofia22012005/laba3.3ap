@@ -9,7 +9,6 @@ using namespace std;
 int main()
 {
 	double x; // вхідний аргумент
-
 	double R; // вхідний параметр
 	double y; // результат обчислення виразу
 	cout << "R = "; cin >> R;
@@ -19,15 +18,12 @@ int main()
 	if (x <= R)
 		y = R;
 	else
-		if ( R < x && x <= 0)
+		if (-R < x && x <= R)
 			y = R - sqrt(R * R - x * x);
-		else
-			if (0 < x && x <= R)
-				y = R - sqrt(R * R - x * x);
 			else
 				if (R < x && x <=6)
 					y = R + (-3-R)/(6-R)*(x-R);
-				else
+				else	
 					y = -3*x+18;
 	cout << endl;
 	cout << "y = " << y << endl;
